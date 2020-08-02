@@ -3,6 +3,9 @@
     <head>
         <title>DogCursos</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
 <body>
@@ -13,6 +16,9 @@
                 <a href="?pagina=cursos">Cursos</a>
                 <a href="?pagina=alunos">Alunos</a>
                 <a href="?pagina=matriculas">Matrículas</a>
+                <?php if(isset($_SESSION['login'])){ ?>
+                    <a href="logout.php"><?php echo $_SESSION['usuario']; ?> (sair)</a>
+                <?php } ?>
             </div>
         </div>
     </header>
